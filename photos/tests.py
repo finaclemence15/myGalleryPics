@@ -48,4 +48,10 @@ class LocationTestClass(TestCase):
     
     # Testing  instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.kigali,Location))                               
+        self.assertTrue(isinstance(self.kigali,Location))
+        
+    def test_save_method(self):
+        self.kigali.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0) 
+                           

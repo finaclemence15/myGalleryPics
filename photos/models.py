@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 class Location(models.Model):
     location = models.CharField(max_length =40)
+    def save_location(self):
+        self.save()    
     
 class Category(models.Model):
     category = models.CharField(max_length =40) 
@@ -20,4 +22,4 @@ class Images(models.Model):
     def save_image(self):
         self.save()
         
-   
+           
