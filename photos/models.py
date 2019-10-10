@@ -1,6 +1,12 @@
 from django.db import models
 
 # Create your models here.
+class Location(models.Model):
+    location = models.CharField(max_length =40)
+    
+class Category(models.Model):
+    category = models.CharField(max_length =40) 
+    
 class Images(models.Model):
     image = models.ImageField(upload_to = 'images/')
     name = models.CharField(max_length =30)
@@ -11,8 +17,4 @@ class Images(models.Model):
     def __str__(self):
         return self.name
         
-class Location(models.Model):
-    location = models.CharField(max_length =40)
-    
-class Category(models.Model):
-    category = models.CharField(max_length =40)    
+   
