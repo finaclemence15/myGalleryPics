@@ -2,10 +2,17 @@ from django.db import models
 
 # Create your models here.
 class Images(models.Model):
-    image = models.ImageField(upload_to = 'images/',null = True)
+    image = models.ImageField(upload_to = 'images/')
     name = models.CharField(max_length =30)
     description = models.CharField(max_length =100)
-    location = models.CharField(max_length =30)
-    category = models.CharField(max_length =30)
+    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category)
     
+    def __str__(self):
+        return self.name
+        
+class Location(models.Model):
+    location = models.CharField(max_length =40)
     
+class Category(models.Model):
+    category = models.CharField(max_length =40)    
