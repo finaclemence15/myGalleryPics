@@ -34,12 +34,6 @@ class ImagesTestClass(TestCase):
         update = Images.objects.filter(id = image.id).update(image='book1.jpg')
         updated= Images.objects.filter(image='book1.jpg').first()
         self.assertNotEqual(image.image,updated.image) 
-
-    # def test_get_image_by_id(self):
-    #     test_id = '1'
-    #     id = dt.datetime.strptime(test_date, '%Y-%m-%d').date()
-    #     news_by_date = Article.days_news(date)
-    #     self.assertTrue(len(news_by_date) == 0)  
     
 class LocationTestClass(TestCase):
     
@@ -53,5 +47,12 @@ class LocationTestClass(TestCase):
     def test_save_method(self):
         self.kigali.save_location()
         locations = Location.objects.all()
-        self.assertTrue(len(locations) > 0) 
+        self.assertTrue(len(locations) > 0)
+        
+    def test_delete(self):
+        self.kigali.save_location()
+        location = Location.objects.filter(location = 'Rwanda').first()
+        delete = Location.objects.filter(id = location.id).delete()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) == 0)     
                            
