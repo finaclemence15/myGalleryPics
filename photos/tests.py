@@ -33,4 +33,19 @@ class ImagesTestClass(TestCase):
         image = Images.objects.filter(image='book.jpg').first()
         update = Images.objects.filter(id = image.id).update(image='book1.jpg')
         updated= Images.objects.filter(image='book1.jpg').first()
-        self.assertNotEqual(image.image,updated.image)                     
+        self.assertNotEqual(image.image,updated.image) 
+
+    # def test_get_image_by_id(self):
+    #     test_id = '1'
+    #     id = dt.datetime.strptime(test_date, '%Y-%m-%d').date()
+    #     news_by_date = Article.days_news(date)
+    #     self.assertTrue(len(news_by_date) == 0)  
+    
+class LocationTestClass(TestCase):
+    
+    def setUp(self):
+        self.kigali= Location(location = 'Rwanda')
+    
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.kigali,Location))                               
