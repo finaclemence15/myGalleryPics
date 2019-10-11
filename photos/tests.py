@@ -54,5 +54,13 @@ class LocationTestClass(TestCase):
         location = Location.objects.filter(location = 'Rwanda').first()
         delete = Location.objects.filter(id = location.id).delete()
         locations = Location.objects.all()
-        self.assertTrue(len(locations) == 0)     
+        self.assertTrue(len(locations) == 0)
+        
+    def test_update(self):
+        self.kigali.save_location()
+        location = Location.objects.filter(location = 'Rwanda').first()
+        update = Location.objects.filter(id = location.id).update(location = 'Nyarugenge')
+        updated = Location.objects.filter(location = 'Nyarugenge').first()
+        self.assertNotEqual(location.location, updated.location)
+                 
                            
