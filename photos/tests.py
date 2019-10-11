@@ -62,5 +62,13 @@ class LocationTestClass(TestCase):
         update = Location.objects.filter(id = location.id).update(location = 'Nyarugenge')
         updated = Location.objects.filter(location = 'Nyarugenge').first()
         self.assertNotEqual(location.location, updated.location)
+        
+class CategoryTestClass(TestCase):
+    def setUp(self):
+        self.travel = Category(category = 'food')
+        
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.travel,Category))            
                  
                            
