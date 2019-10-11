@@ -2,25 +2,24 @@
 {% block content %} 
 {{ block.super}}
 
-<div class="container">
+<div class="container">   
     
-  <!-- Looping through news   -->
+  <!-- Looping through images   -->
   {% for photo in photos %}
 
   <div class="row">
-    <!-- displaying News articles -->
+  <!--Display Images --> 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2> Photo Name : {{ photo.name }} </h2>
-          <!--Display news Article images  --> 
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <img src="{{photo.image.url}}" class="img-responsive" alt="Image" height="300px" width="300px">
+      <img id="myImg" src="{{photo.image.url}}" class="img-responsive" alt="Image" height="300" width="300"> <br> <br> <br>
     </div>
+      <!-- displaying decription of images -->
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <h2><u></u> {{ photo.name }} </h2>
       <p>Image Description : {{photo.description}}</p>
-      <p><strong> Image Location: </strong> <em>{{photo.location}}</em></p>
+      <p> Image Location:{{photo.location}}</p>
       <p> Image category: {{photo.category}}<p>
-
     </div>
-  </div>
+    </div>
 
   {% empty %}
   <div class="row">
@@ -28,7 +27,7 @@
   </div>
   {% endfor %}
 
-</div>
 
+</div>
 
 {% endblock %}
