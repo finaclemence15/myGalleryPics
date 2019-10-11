@@ -72,9 +72,18 @@ class CategoryTestClass(TestCase):
         self.assertTrue(isinstance(self.travel,Category))   
         
     # Testing  save method of Category model
-    def  test_save_method(self):
+    def test_save_method(self):
         self.travel.save_category()
         categories = Category.objects.all()
-        self.assertTrue(len(categories) > 0)            
+        self.assertTrue(len(categories) > 0)
+        
+    # Testing  delete method of Category model
+    
+    def test_delete(self):
+        self.travel.save_category()
+        category = Category.objects.filter(category = 'food').first()
+        delete = Category.objects.filter(id = category.id).delete()
+        categories = Category.objects.all()
+        self.assertTrue(len(categories) == 0)            
                  
                            
