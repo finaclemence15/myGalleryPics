@@ -15,16 +15,17 @@
       <!-- Image Details modal -->
       <div class="modal fade" id="{{photo.id}}" tabindex="-1" role="dialog" aria-labelledby="imageTitle"
         aria-hidden="true">
-        <div style="width:1000px; height:500px; padding-top:100px;" class="modal-dialog" role="document">
+        <div  class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-              <h5 class="modal-name" id="imageTitle">{{photo.name}}</h5>
+                <h5 class="modal-name" id="imageTitle">{{photo.name}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <br>
+
               <!-- </button> -->
             </div>
             <div class="modal-body">
               <img src="{{photo.image.url}}" style="width:400px; height:400px;" alt="Image">
-              <br>
+              <br> <br>
               <p>Image Description : {{photo.description}}</p>
               <p> Image Location:{{photo.location}}</p>
               <p> Image category: {{photo.category}}<p>
