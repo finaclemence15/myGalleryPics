@@ -9,6 +9,9 @@ class Location(models.Model):
 class Category(models.Model):
     category = models.CharField(max_length =40) 
     
+    def save_category(self):
+        self.save()
+            
 class Images(models.Model):
     image = models.ImageField(upload_to = 'images/')
     name = models.CharField(max_length =30)
