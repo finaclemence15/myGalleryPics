@@ -8,7 +8,7 @@ from . models import Images
 def welcome(request):
     photos = Images.objects.all()
     # return HttpResponse('Welcome My Gallery.')
-    return render(request, 'all-news/home.html',{'photos':photos})
+    return render(request, 'all-news/index.html',{'photos':photos})
 
 def search_images(request):
 
