@@ -11,7 +11,7 @@
     <div class="col-md-3">
         <h5  id="imageTitle" style="text-align: center;">{{photo.name}}</h5>
       <img style="margin-bottom: 30px; width:1000px; height:300px;" src="{{photo.image.url}}"
-        class="img-thumbnail photo" alt="Image" data-toggle="modal" data-target="#{{photo.id}}">
+        class="img-thumbnail photo img-responsive" alt="Image" data-toggle="modal" data-target="#{{photo.id}}">
 
       <!-- Image Details modal -->
       <div class="modal fade" id="{{photo.id}}" tabindex="-1" role="dialog" aria-labelledby="imageTitle"
@@ -25,7 +25,7 @@
               <!-- </button> -->
             </div>
             <div class="modal-body">
-              <img  src="{{photo.image.url}}" style="width:400px; height:400px; margin-left: 30px;" alt="Image">
+              <img  src="{{photo.image.url}}" style="width:400px; height:400px; margin-left: 30px;" alt="Image" class="img-thumbnail photo img-responsive">
               <br> <br>
               <p>Image Description : {{photo.description}}</p>
               <p> Image Location:{{photo.location}}</p>
