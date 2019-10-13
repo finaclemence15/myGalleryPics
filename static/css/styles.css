@@ -6,6 +6,15 @@ h1
   font-family: 'Source Code Pro', monospace;
 }
 
+.navbar {
+  background-color: transparent !important;
+}
+.navbar > a{
+  color: white !important;
+}
+.navbar  li > a{
+  color: white !important;
+}
 
 #found{
   color: red;
