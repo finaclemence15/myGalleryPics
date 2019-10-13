@@ -8,7 +8,8 @@
   <div class="row">
     {% for photo in photos %}
     <div class="col-md-3">
-      <h5 id="imageTitle" style="text-align: center; color: #000066 ; font-family: 'Grenze', serif; font-size: 30px;"> <strong> {{photo.name}} </strong></h5>
+      <h5 id="imageTitle" style="text-align: center; color: #000066 ; font-family: 'Grenze', serif; font-size: 30px;">
+        <strong> {{photo.name}} </strong></h5>
       <img style="margin-bottom: 30px; width:1000px; height:300px;" src="{{photo.image.url}}"
         class="img-thumbnail photo img-responsive" alt="Image" data-toggle="modal" data-target="#{{photo.id}}">
 
@@ -18,7 +19,8 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-name" id="imageTitle" style="color: #000066 ; font-family: 'Teko', sans-serif; font-size: 30px;"><b> {{photo.name}} </b></h5>
+              <h5 class="modal-name" id="imageTitle"
+                style="color: #000066 ; font-family: 'Teko', sans-serif; font-size: 30px;"><b> {{photo.name}} </b></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                   aria-hidden="true">&times;</span></button> <br>
 
@@ -28,9 +30,9 @@
               <img src="{{photo.image.url}}" style="width:400px; height:400px; margin-left: 30px;" alt="Image"
                 class="img-thumbnail photo img-responsive">
               <br> <br>
-              <p>Image Description : {{photo.description}}</p>
-              <p> Image Location:{{photo.location}}</p>
-              <p> Image category: {{photo.category}}<p>
+              <b style="font-family: 'Teko', sans-serif; font-size: 25px">  Description </b> <p id="para"> <strong>{{photo.description}} </strong></p>
+              <b style="font-family: 'Teko', sans-serif; font-size: 25px"> Location </b> <p id="para"> <i>{{photo.location}} </i></p>
+              <b style="font-family: 'Teko', sans-serif; font-size: 25px"> category </b> <p id="para"> <strong> {{photo.category}} </strong><p>
                   <button class="rounded btn-primary" onclick="copyLink('{{image.id}}-url')">Copy Link</button>
                   <input class="form-control input-lg" type="text" value="http://127.0.0.1:8000{{photo.image.url}}"
                     id="{{image.id}}-url">

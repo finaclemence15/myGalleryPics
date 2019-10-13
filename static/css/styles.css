@@ -39,3 +39,8 @@ h1
   height: 500px;
   max-height: 500px;
 }
+#para{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  color: #7B7D7D ;
+}
