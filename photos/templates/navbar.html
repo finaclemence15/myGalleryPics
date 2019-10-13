@@ -8,7 +8,7 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Category
@@ -16,11 +16,11 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {% for category in categories %}
               <a class="dropdown-item"
-                href="{% url 'page_category' category.category_name %}">{{category.category_name}}</a>
+                href="{% url 'page_category' category.category %}">{{category.category}}</a>
               <div class="dropdown-divider"></div>
               {% endfor %}
             </div>
-          </li>
+          </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -28,7 +28,7 @@
             </a>
             <div class="dropdown-menu drop" aria-labelledby="navbarDropdown">
               {% for locat in locations %}
-              <a class="dropdown-item" href="{% url 'page_location' locat.location_name %}">{{locat.location_name}}</a>
+              <a class="dropdown-item" href="{% url 'page_location' locat.location %}">{{locat.location}}</a>
               <div class="dropdown-divider"></div>
 
 
@@ -40,16 +40,13 @@
     </nav>
     <div class="text-center header mt-5">
       <h1 class='text-center'> <strong> Welcome To My Gallery </strong> </h1>
-      <form class="w-100 mt-5" action="{% url 'search_images' %}">
-        <input class="w-50" type="search" placeholder="Search Images by Category" name="image" aria-label="Search">
-        <div class="input-group-btn">
-        </div>
-        <button class="btn rounded p-0" type="submit" style="margin-left: -50px; margin-bottom: 15px;">
-          <img src="https://www.freeiconspng.com/uploads/search-icon-png-27.png" alt="" width="32px"
-            height="32px"></button>
+      <form class="w-100 mt-4" action="{% url 'search_images' %}">
+        <input class="w-50 p-3" type="search" placeholder="Search Images by Category" name="image" aria-label="Search">
+        <button class="btn rounded p-0" type="submit" style="margin-left: -50px; margin-bottom: 15px;"><img src="https://www.freeiconspng.com/uploads/search-icon-png-27.png" alt="" width="30px"
+            height="30px"></button>
       </form>
-      <div class="suggested">
-        <p id="suggest"><strong> Suggested: travel , nature , food , animal. </strong>  </p>
+      <div class="suggested"> <br>
+        <p id="suggest"><strong> Suggested: travel , nature , food , animal </strong>  </p>
 
       </div>
     </div>
