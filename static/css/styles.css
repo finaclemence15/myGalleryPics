@@ -9,11 +9,17 @@ h1
 .navbar {
   background-color: transparent !important;
 }
-.navbar > a{
-  color: white !important;
+.navbar > a , li > a{
+  color: #F0F3F4!important;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
 }
-.navbar  li > a{
-  color: white !important;
+
+#suggest{
+  color: #FDFEFE !important;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #found{
