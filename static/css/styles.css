@@ -23,7 +23,10 @@ h1
 }
 
 #found{
-  color: red;
+  text-align: center;
+  color: #21618C ;
+  font-family: 'Big Shoulders Text', cursive;
+
 }
 
 #navback{

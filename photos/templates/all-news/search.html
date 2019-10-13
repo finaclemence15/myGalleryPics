@@ -4,9 +4,9 @@
 
   <div class="row">
     {% if images%}
-      <h2 id="found">Found {{ images|length }} of searched term {{message}}</h2> <br> <br> <br>
+      <h2 id="found" style="text-align: center">Found {{ images|length }} images of searched  {{message}} Category</h2> <br> <br> <br>
     {% else %}
-      <h2> Found 0 images for the search term {{message}}</h2>
+      <h2 id="found" style="text-align: center">  No images found for the searched Category " {{message}} "</h2>
     {% endif %}
 
   </div>

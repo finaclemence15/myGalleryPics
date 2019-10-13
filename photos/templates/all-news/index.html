@@ -8,7 +8,7 @@
   <div class="row">
     {% for photo in photos %}
     <div class="col-md-3">
-      <h5 id="imageTitle" style="text-align: center;">{{photo.name}}</h5>
+      <h5 id="imageTitle" style="text-align: center; color: #000066 ; font-family: 'Grenze', serif; font-size: 30px;"> <strong> {{photo.name}} </strong></h5>
       <img style="margin-bottom: 30px; width:1000px; height:300px;" src="{{photo.image.url}}"
         class="img-thumbnail photo img-responsive" alt="Image" data-toggle="modal" data-target="#{{photo.id}}">
 
@@ -42,7 +42,7 @@
                       var copyText = document.getElementById(imageid);
                       copyText.select();
                       document.execCommand("copy");
-                      alert("Link copied to clipboard: " + copyText.value);
+                      alert("Copy The link of the Image : " + copyText.value);
                     }
                   </script>
 

@@ -20,7 +20,7 @@ def search_images(request):
         return render(request, 'all-news/search.html',{"message":message,"images": searched_images})
 
     else:
-        message = "You haven't searched for any term"
+        message = "You haven't searched for any Category"
         return render(request, 'all-news/search.html',{"message":message})
     
 # def article(request,article_id):
