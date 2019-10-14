@@ -12,7 +12,7 @@ This is an application that contains different images.
 
 A personal gallery application to display great photos by categories and locations from around the world.
 
-## User Specifications
+## User Stories
 
 1. View different photos that interest me.
 2. Click on a single photo to expand it and also view the details of the photo. The photo details must appear on a modal within the same route as the main page.
@@ -23,7 +23,6 @@ A personal gallery application to display great photos by categories and locatio
  
 ## Installation Requirement
 
- ### Clone  the Repository using  command below:
 
 ```
 git clone https://github.com/finaclemence15/myGalleryPics
