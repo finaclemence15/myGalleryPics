@@ -30,24 +30,27 @@
               <img src="{{photo.image.url}}" style="width:400px; height:400px; margin-left: 30px;" alt="Image"
                 class="img-thumbnail photo img-responsive">
               <br> <br>
-              <b style="font-family: 'Teko', sans-serif; font-size: 25px">  Description </b> <p id="para"> <strong>{{photo.description}} </strong></p>
-              <b style="font-family: 'Teko', sans-serif; font-size: 25px"> Location </b> <p id="para"> <i>{{photo.location}} </i></p>
-              <b style="font-family: 'Teko', sans-serif; font-size: 25px"> category </b> <p id="para"> <strong> {{photo.category}} </strong><p>
-                  <button class="rounded btn-primary" onclick="copyLink('{{image.id}}-url')">Copy Link</button>
+              <b style="font-family: 'Teko', sans-serif; font-size: 25px"> Description </b>
+              <p id="para"> <strong>{{photo.description}} </strong></p>
+              <b style="font-family: 'Teko', sans-serif; font-size: 25px"> Location </b>
+              <p id="para"> <i>{{photo.location}} </i></p>
+              <b style="font-family: 'Teko', sans-serif; font-size: 25px"> category </b>
+              <p id="para"> <strong> {{photo.category}} </strong>
+                <p>
+                  <button class="rounded btn-primary" onclick="copyUrl('{{photo.id}}-url')">Copy Link</button>
                   <input class="form-control input-lg" type="text" value="http://127.0.0.1:8000{{photo.image.url}}"
-                    id="{{image.id}}-url">
+                    id="{{photo.id}}-url">
 
                   <!-- Script for copying images link -->
-                  <script>
-                    function copyLink(imageid) {
-                      console.log("copied");
-                      var copyText = document.getElementById(imageid);
-                      copyText.select();
-                      document.execCommand("copy");
-                      alert("Copy The link of the Image : " + copyText.value);
+
+                  <script type="text/javascript">
+                    function copyUrl(element) {
+                      var myVar = document.getElementById(element);
+                      myVar.select();
+                      document.execCommand('copy');
+                      alert("Copied the link of image: " + myVar.value);
                     }
                   </script>
-
             </div>
 
           </div>
