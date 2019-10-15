@@ -25,19 +25,19 @@ def search_images(request):
     
 def landing(request):
     all_images = Image.objects.all()
-    locations = Location.objects.all()
-    categories = Category.objects.all()
+    location = Location.objects.all()
+    category = Category.objects.all()
     title = 'Home'
 
-    return render(request,'index.html', {'all_images':all_images,'locations':locations,'categories':categories, 'title':title})
+    return render(request,'index.html', {'all_images':all_images,'location':location,'category':category, 'title':title})
 
 
 def page_location(request,location):
-    locations = Location.objects.all()
-    categories = Category.objects.all()
+    location = Location.objects.all()
+    category = Category.objects.all()
     title = f"{location}"
     location_results = Image.filter_location(location)
-    return render(request,'index.html',{'all_images':location_results,'locations':locations,'categories':categories, 'title':title})    
+    return render(request,'index.html',{'all_images':location_results,'location':location,'category':category, 'title':title})    
     
 # def article(request,article_id):
 #     try:
@@ -45,3 +45,4 @@ def page_location(request,location):
 #     except DoesNotExist:
 #         raise Http404()
 #     return render(request,"all-news/article.html", {"article":article})    
+
