@@ -14,14 +14,6 @@
               aria-haspopup="true" aria-expanded="false">
               Locations
             </a>
-            <div class="dropdown-menu drop" aria-labelledby="navbarDropdown">
-              {% for locat in location %}
-              <a class="dropdown-item" href="{% url 'page_location' locat.location %}">{{locat.location}}</a>
-              <!-- <div class="dropdown-divider"></div> -->
-
-
-              {% endfor %}
-            </div>
           </li>
         </ul>
       </div>

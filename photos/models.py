@@ -36,16 +36,3 @@ class Images(models.Model):
     
     def save_image(self):
         self.save()
-        
-        #    
-
-    @classmethod
-    def filter_location(cls,location):
-        filter_loc = cls.objects.filter(image__location__icontains=location)
-        return filter_loc
-
-
-    @classmethod
-    def get_image_by_id(cls,input_id):
-        image_got = cls.objects.get(id=input_id)
-        return image_got        
