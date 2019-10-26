@@ -60,6 +60,7 @@ class LocationTestClass(TestCase):
         locations = Location.objects.all()
         self.assertTrue(len(locations) == 0)
     
+    
     # Testing  update method of Location model    
     def test_update(self):
         self.kigali.save_location()
